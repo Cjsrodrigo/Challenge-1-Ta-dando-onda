@@ -28,22 +28,50 @@ print("O vínculo dos dois era muito forte. Para eles, o surf sempre foi mais qu
 print(keepGoing)
 let aux = readLine()
 
+//certo dia ... morte do pai
 print("Certo final de semana, \(mainName!) acorda no meio da madrugada com os barulhos de seu pai se preparando para mais uma viagem de surf dele.\n")
 
 print("** \(mainName!), opta por: **\n 1: Voltar a dormir \n 2: Falar com o pai e o deseja boas ondas")
-
-var escolha = readLine()
+var choice = choose(options: 2)
 
 print("\(mainName!) acorda no dia seguinte com barulhos muito altos de choro vindo da sala. Ela resolve ir ver o que está acontecendo e se depara com o seu pior pesadelo tornando-se realidade: o pai sofreu um acidente de carro fatal a caminho da praia.\n")
 
-while (escolha != "1" && escolha != "2") {
-    print("Opcao escolhida é invalida\n")
-    escolha = readLine()
-}
-if escolha == "1"{
+if choice == "1"{
         print("\(mainName!) corre para o quarto chorando, abalada com a notícia e carregando o fardo de ter tido a oportunidade de se despedir do pai, mas preferiu ficar dormindo.\n")
 }else{
     print("\(mainName!) abraça a mãe e as duas choram juntas, abaladíssimas com o ocorrido.\n")
     
 }
+
+// investir no surf + tigrinho
+
+
+
+
+
+
+//gap entre 14-18/20
+
+
+
+
+
+//torneio e fim
+
+func choose(options: Int) -> String {
+    var choice = readLine()
+    if(options == 2){
+        while (choice != "1" && choice != "2") {
+            print("Opcao escolhida é invalida\n")
+            choice = readLine()
+        }
+    }else{
+        while (choice != "1" && choice != "2" && choice != "3") {
+            print("Opcao escolhida é invalida\n")
+            choice = readLine()
+        }
+    }
+    return choice!
+}
+
 
