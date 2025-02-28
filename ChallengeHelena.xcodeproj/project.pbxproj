@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD13C8872D6CA28100F1CD8C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8862D6CA28100F1CD8C /* main.swift */; };
+		AD922D812D71D89C00AF19E9 /* Progress in Frameworks */ = {isa = PBXBuildFile; productRef = AD922D802D71D89C00AF19E9 /* Progress */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD922D812D71D89C00AF19E9 /* Progress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,9 @@
 			dependencies = (
 			);
 			name = ChallengeHelena;
+			packageProductDependencies = (
+				AD922D802D71D89C00AF19E9 /* Progress */,
+			);
 			productName = ChallengeHelena;
 			productReference = AD13C8832D6CA28100F1CD8C /* ChallengeHelena */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +111,9 @@
 				Base,
 			);
 			mainGroup = AD13C87A2D6CA28100F1CD8C;
+			packageReferences = (
+				AD922D7F2D71D89C00AF19E9 /* XCRemoteSwiftPackageReference "Progress" */,
+			);
 			productRefGroup = AD13C8842D6CA28100F1CD8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,6 +290,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD922D7F2D71D89C00AF19E9 /* XCRemoteSwiftPackageReference "Progress" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jkandzi/Progress.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD922D802D71D89C00AF19E9 /* Progress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD922D7F2D71D89C00AF19E9 /* XCRemoteSwiftPackageReference "Progress" */;
+			productName = Progress;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD13C87B2D6CA28100F1CD8C /* Project object */;
 }

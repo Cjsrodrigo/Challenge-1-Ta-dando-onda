@@ -6,7 +6,13 @@
 //
 
 import Foundation
+import Progress
 
+var count = 0
+var running = true
+var queue1 = OperationQueue()
+var queue2 = OperationQueue()
+var printQueue = OperationQueue()
 
 
 // introducao inicial e captacao das variaveis dos nomes
@@ -41,7 +47,7 @@ if choice == "1"{
         print("\(mainName!) corre para o quarto chorando, abalada com a notícia e carregando o fardo de ter tido a oportunidade de se despedir do pai, mas preferiu ficar dormindo.\n")
 }else{
     print("\(mainName!) abraça a mãe e as duas choram juntas, abaladíssimas com o ocorrido.\n")
-    
+
 }
 
 // investir no surf + tigrinho
@@ -60,38 +66,102 @@ print("Faltava um mês para a classificatória quando a sua mãe resolveu a surp
 
 print("** A menina entra em um embate: \n 1: Viaja com a mãe, abdicando dos treinos durante aquela semana, mas aproveitando o momento familiar juntas. \n 2: Decide permanecer em Ubatuba dando um “gás final”, refinando todas as técnicas aprendidas até então.** ")
 
+choice = choose(2)
+
 if choice == "1"{
         print("\(mainName!) aproveita todos os momentos no RJ com a mãe, visita o Cristo Redentor, o Pão de Açúcar, consegue até surfar um pouco nas praias da região com uma prancha alugada. Aprendeu até mesmo uma manobra nova com os surfistas do local.\n")
-    
-    
+
+
        print("Uma semana depois, após voltar para sua cidade, \(mainName!)  se prepara para entrar no mar em sua bateria da seletiva. Parecia que o universo estava a seu favor, clima perfeito, boas ondas e ela consegue pontuar muito.")
-    
-    //interacao classificatoria
-    
-    //
-    
-    //
-    
+
+
+
+
    print(" O que garantiu a sua tão sonhada classificação para o Makai foi a manobra final, a que ela aprendeu na viagem. Era isto. Ela tinha sido selecionada. Ela iria para o Hawaii. Teria 6 meses para treinar até o Makai.\n")
 
 }else{
     print("Ao invés de aproveitar os momentos no RJ com sua mãe, ela permanece em Ubatuba treinando exaustivamente. Ela não queria dar margem para erros, era seu sonho, nada iria entrar no seu caminho contra a almejada classificação.\n")
-    
+
     print("Chega o dia do torneio, \(mainName!) havia praticado muito, mas estava exausta. Ela entra no mar e parecia que ela não focar como de costume. O cansaço acumulado da semana custa caro, ela não consegue pontuar o suficiente. Sentia que havia perdido a chance de sua vida.\n")
-    
+
 }
 // Apos 2 anos, ela com 20 anos
-    
+
     print("Após a frustrada derrota aos 18 anos, a menina resolveu não desistir. Ela sentia que desistir seria decepcionar o legado do pai. Aprendeu a lição, passou os 2 últimos anos continuando a se esforçar muito, mas sem se esgotar física e mentalmente no processo e sabendo aproveitar a importância dos momentos de lazer e descanso também.\n")
-    
+
     print("O torneio de classificação voltaria a acontecer naquele ano. Ela sabia que dessa vez não iria desperdiçar a chance.\n")
+
+    print("Chega o esperado dia, Helena entra no mar e começa sua bateria, dessa vez com suas capacidades físicas e mentais preservadas. Parecia que o universo estava a seu favor, clima perfeito, boas ondas e ela consegue pontuar muito.")
+
+////interacao partida
+
+print("Voce tera 5 segundos para teclar A 10 vezes")
+sleep(4)
+
+private func verifyScore() {
+  queue2.addOperation {
+    sleep(5)
+    running = false
+    let result = count
+
+      printQueue.addOperation {
+    if result < 3 {
+      
+        print(" ELIMINADA \n\n Pontos:\(result)")
+      
+    } else {
+        print("Classificada!! 🏄‍♀️ Pontos: \(result)")
+    }
+    }
+    count = 0
+  }
+}
+func history() {
+  queue1.addOperation {
+    printQueue.addOperation {
+      print("MATCH START")
+    }
+
+    verifyScore()
+    DispatchQueue.global(qos: .background).async {
+    while running {
+      if let line = readLine() {
+        if line == "a" {
+          count = count + 1
+        }
+      }
+    }
+      }
+      DispatchQueue.main.async {
+
+          while running {
+                          RunLoop.current.run(until: Date().addingTimeInterval(0.1)) // Run the loop to allow other tasks
+                      }
+  }
+}
+}
+history()
+
+
+
+DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
     
-//interacao partida
-RunLoop.main.run()
+    print("continua a historia")
+    
+    print("Foto da medalha")
+   
+    
+}
 
 
-//torneio e fim
 
+
+
+
+
+RunLoop.current.run()
+////torneio e fim
+//
 func choose(_ options: Int) -> String {
     var choice = readLine()
     if(options == 2){
@@ -107,5 +177,6 @@ func choose(_ options: Int) -> String {
     }
     return choice!
 }
+
 
 
