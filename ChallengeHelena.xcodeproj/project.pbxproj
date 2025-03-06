@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AD13C8872D6CA28100F1CD8C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13C8862D6CA28100F1CD8C /* main.swift */; };
+		EC4C15E72D79BBD10082A6FC /* gap.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C15E62D79BBD10082A6FC /* gap.swift */; };
+		EC4C15E92D79BCBA0082A6FC /* end.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C15E82D79BCBA0082A6FC /* end.swift */; };
 		EC4EC6AC2D71F45C0079381F /* introduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC6AB2D71F45C0079381F /* introduction.swift */; };
 		EC4EC6AE2D71FC890079381F /* fortuneTiger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC6AD2D71FC890079381F /* fortuneTiger.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		AD13C8832D6CA28100F1CD8C /* ChallengeHelena */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChallengeHelena; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD13C8862D6CA28100F1CD8C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EC4C15E62D79BBD10082A6FC /* gap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gap.swift; sourceTree = "<group>"; };
+		EC4C15E82D79BCBA0082A6FC /* end.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = end.swift; sourceTree = "<group>"; };
 		EC4EC6AB2D71F45C0079381F /* introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introduction.swift; sourceTree = "<group>"; };
 		EC4EC6AD2D71FC890079381F /* fortuneTiger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fortuneTiger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +68,8 @@
 				AD13C8862D6CA28100F1CD8C /* main.swift */,
 				EC4EC6AB2D71F45C0079381F /* introduction.swift */,
 				EC4EC6AD2D71FC890079381F /* fortuneTiger.swift */,
+				EC4C15E62D79BBD10082A6FC /* gap.swift */,
+				EC4C15E82D79BCBA0082A6FC /* end.swift */,
 			);
 			path = ChallengeHelena;
 			sourceTree = "<group>";
@@ -126,8 +132,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4C15E72D79BBD10082A6FC /* gap.swift in Sources */,
 				AD13C8872D6CA28100F1CD8C /* main.swift in Sources */,
 				EC4EC6AE2D71FC890079381F /* fortuneTiger.swift in Sources */,
+				EC4C15E92D79BCBA0082A6FC /* end.swift in Sources */,
 				EC4EC6AC2D71F45C0079381F /* introduction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
